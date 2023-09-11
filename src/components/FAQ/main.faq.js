@@ -45,7 +45,7 @@ const FAQ = () => {
             <div
               className="border-2 border-black px-3 py-2 rounded-lg"
               style={{
-                boxShadow: "0.4rem 0.4rem 0 #222",
+                boxShadow: "0.4rem 0.4rem 0 #000",
                 backgroundColor: list.color,
               }}
             >

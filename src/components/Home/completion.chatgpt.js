@@ -45,7 +45,7 @@ const Completion = () => {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col justify-start">
+      <div className="ml-12 min-h-full flex flex-col justify-start">
         <div>
           {/*
 
@@ -73,7 +73,7 @@ const Completion = () => {
               {log.user === "me" && (
                 <div
                   className="flex p-5 rounded-lg mb-5 bg-blue-300 border-2 border-black"
-                  style={{ boxShadow: "0.4rem 0.4rem 0 #222" }}
+                  style={{ boxShadow: "0.4rem 0.4rem 0 #000" }}
                   key={i}
                 >
                   <img
@@ -89,7 +89,7 @@ const Completion = () => {
               {log.user === "gpt" && (
                 <div
                   className="flex p-5 bg-yellow-400 rounded-lg mt-5 mb-5 border-2 border-black"
-                  style={{ boxShadow: "0.4rem 0.4rem 0 #222" }}
+                  style={{ boxShadow: "0.4rem 0.4rem 0 #000" }}
                   key={i}
                 >
                   <img
@@ -108,7 +108,7 @@ const Completion = () => {
             <div className="relative">
               <div
                 className="flex p-5 bg-yellow-400 rounded-lg mt-5 mb-5 border-2 border-black"
-                style={{ boxShadow: "0.4rem 0.4rem 0 #222" }}
+                style={{ boxShadow: "0.4rem 0.4rem 0 #000" }}
               >
                 <img src="openai-dark.png" className="w-6 h-6 mr-3" alt="gpt" />
                 <div class="col-3">
@@ -147,7 +147,7 @@ const Completion = () => {
           <TextareaAutosize
             className="w-full border-2 border-black rounded-md placeholder-gray-500 resize-none py-2 pl-3 pr-10 md:pl-5 outline-none"
             placeholder="Enter your message here"
-            style={{ boxShadow: "0.4rem 0.4rem 0 #222" }}
+            style={{ boxShadow: "0.4rem 0.4rem 0 #000" }}
             maxRows={5}
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}

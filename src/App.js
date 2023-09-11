@@ -1,22 +1,20 @@
 import React from "react";
+import MovieDetails from './components/MovieDetails/MovieDetails';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Chatgpt from "./components/ChatGPT/main.chatgpt";
-// import Dalle from "./components/Dall-E/main.dalle";
 import MainLayouts from "./components/Layouts/main.layouts";
 import { Sidebar } from "./components/Layouts/sidebar.layouts";
-// import Octocat from "./components/Utilities/octocat";
 import Home from "./components/Home/main.home";
 import FAQ from "./components/FAQ/main.faq";
-// import Demo from "./components/Demo/main.demo";
 
 const App = () => {
   return (
     <MainLayouts>
       <BrowserRouter>
-        <div className="flex">
+        <div className="bg-[#1c1c1c] flex">
           <Sidebar />
-          <main className="p-7 flex-1">
+          <main className="bg-[#1c1c1c] p-7 flex1">
             <Routes>
+            <Route path="/movie/:movieId" element={<MovieDetails />} />
               <Route
                 path="/"
                 element={
@@ -26,26 +24,7 @@ const App = () => {
                   />
                 }
               />
-              {/* <Route
-                path="/chatgpt"
-                element={
-                  <Chatgpt
-                    title="Chat"
-                    description="Interacts with AI in a conversational way."
-                  />
-                }
-              /> */}
-              {/* <Route
-                path="/dall-e"
-                element={
-                  <Dalle
-                    title="Dall·E 2"
-                    description="Create original, realistic images and art from a text description"
-                  />
-                }
-              /> */}
               <Route path="/question" element={<FAQ />} />
-              {/* <Route path="/demo" element={<Demo />} /> */}
             </Routes>
           </main>
         </div>
